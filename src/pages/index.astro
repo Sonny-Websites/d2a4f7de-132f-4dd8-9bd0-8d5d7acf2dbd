@@ -1,118 +1,155 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'My Site',
-  url: 'https://example.com',
-  description: 'We provide top-notch services and solutions',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'Customer Service',
-    availableLanguage: ['en']
-  }
-};
+import SiteForm from '../components/SiteForm.astro';
 ---
 
 <BaseLayout
-  title="Landing Page - Premium Services & Solutions"
-  description="Our landing page offers top-notch services and solutions for your business needs."
-  ogTitle="Welcome to Our Site"
-  ogDescription="Discover amazing things with us. We provide top-notch services and solutions."
-  jsonLd={jsonLd}
+  title="Level303 — Sementara Offline"
+  description="Situs Level303 sementara offline. Tinggalkan pesan untuk menerima kabar saat situs aktif kembali."
+  ogTitle="Level303 — Sementara Offline"
+  ogDescription="Situs Level303 sementara offline. Tinggalkan pesan untuk menerima kabar saat situs aktif kembali."
 >
-  <Header current="home" />
-  <section class="hero" role="region" aria-labelledby="heroHeading">
-    <div class="hero-wrapper">
-      <div class="hero-content">
-        <div class="hero-tag">Welcome to Excellence</div>
-        <h1 id="heroHeading">Exceptional Services Built for Your Success</h1>
-        <p class="hero-subtitle">Discover amazing things with us. We provide top-notch services and solutions that transform businesses and exceed expectations.</p>
-        <div class="hero-buttons">
-          <a href="#features" class="btn btn-primary btn-large">Explore Features</a>
-          <a href="#contact" class="btn btn-secondary btn-large">Get in Touch</a>
-        </div>
-      </div>
-      <div class="hero-image-placeholder">
-        <img src="https://placehold.co/500x500/667eea/ffffff?text=Our+Services" alt="Professional services showcase" loading="lazy" />
-      </div>
-    </div>
-  </section>
-  <section id="features" class="features" role="region" aria-labelledby="featuresHeading">
-    <h2 id="featuresHeading">Our Key Features</h2>
-    <div class="features-grid">
-      <article class="feature-card">
-        <div class="feature-icon">🚀</div>
-        <h3>Fast Performance</h3>
-        <p>Lightning-fast delivery of our services with optimized solutions tailored to your needs.</p>
-        <a href="#contact" class="btn btn-small">Learn More</a>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">💎</div>
-        <h3>Premium Quality</h3>
-        <p>We guarantee the highest quality standards in every product and service we deliver.</p>
-        <a href="#contact" class="btn btn-small">Learn More</a>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">🛡️</div>
-        <h3>Secure & Reliable</h3>
-        <p>Your data and trust are our priority with enterprise-grade security protocols.</p>
-        <a href="#contact" class="btn btn-small">Learn More</a>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">🤝</div>
-        <h3>Expert Support</h3>
-        <p>Dedicated support team available 24/7 to assist with any questions or concerns.</p>
-        <a href="#contact" class="btn btn-small">Learn More</a>
-      </article>
-    </div>
-  </section>
-  <section id="testimonials" class="testimonials" role="region" aria-labelledby="testimonialsHeading">
-    <h2 id="testimonialsHeading">What Our Customers Say</h2>
-    <div class="testimonials-grid">
-      <article class="testimonial-card">
-        <div class="testimonial-rating">★★★★★</div>
-        <p class="testimonial-text">"This service has transformed our business operations. Highly recommended!"</p>
-        <p class="testimonial-author">- Sarah Johnson, CEO</p>
-      </article>
-      <article class="testimonial-card">
-        <div class="testimonial-rating">★★★★★</div>
-        <p class="testimonial-text">"Exceptional quality and support. Best decision we've made for our company."</p>
-        <p class="testimonial-author">- Michael Chen, Director</p>
-      </article>
-      <article class="testimonial-card">
-        <div class="testimonial-rating">★★★★★</div>
-        <p class="testimonial-text">"Professional team with outstanding results. Worth every penny!"</p>
-        <p class="testimonial-author">- Emily Rodriguez, Manager</p>
-      </article>
-    </div>
-  </section>
-  <section id="contact" class="contact" role="region" aria-labelledby="contactHeading">
-    <h2 id="contactHeading">Contact Us</h2>
-    <p class="contact-description">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-    <form id="contactForm" method="post" action="/__forms/contact" novalidate>
-      <div class="form-group">
-        <label for="name">Name <span aria-label="required">*</span></label>
-        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError" />
-        <span id="nameError" class="error-message"></span>
-      </div>
-      <div class="form-group">
-        <label for="email">Email <span aria-label="required">*</span></label>
-        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailError" />
-        <span id="emailError" class="error-message"></span>
-      </div>
-      <div class="form-group">
-        <label for="message">Message <span aria-label="required">*</span></label>
-        <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="messageError"></textarea>
-        <span id="messageError" class="error-message"></span>
-      </div>
-      <input type="text" name="_hp" style="display:none" autocomplete="off" tabindex="-1" />
-      <button type="submit" id="submitBtn" class="btn btn-primary" aria-busy="false">Send Message</button>
-    </form>
-    <div id="responseMessage" role="alert"></div>
-  </section>
-  <Footer />
+  <main class="placeholder-page">
+    <section class="placeholder-card" aria-labelledby="heroHeading">
+      <h1 id="heroHeading">Level303 — Kami Sedang Memulihkan Situs</h1>
+      <p>
+        Situs kami sementara offline. Kami sedang bekerja untuk mengembalikan akses secepat mungkin.
+        Tinggalkan pesan dan kami akan beri kabar ketika situs aktif lagi.
+      </p>
+
+      <SiteForm formId="contact" />
+
+      <p class="secondary-cta">Butuh bantuan segera? Balas email ini untuk berkomunikasi.</p>
+    </section>
+
+    <footer class="placeholder-footer">
+      <p>Temporary placeholder provided by Pluzi.</p>
+    </footer>
+  </main>
+
+  <style>
+    :global(body) {
+      margin: 0;
+      background: #fff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    .placeholder-page {
+      min-height: 100vh;
+      padding: 48px 16px 24px;
+    }
+
+    .placeholder-card {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+      line-height: 1.2;
+      margin: 0 0 16px;
+      color: #000;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #000;
+    }
+
+    :global(.placeholder-form .form-group) {
+      margin-bottom: 16px;
+    }
+
+    :global(.placeholder-form label) {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #000;
+    }
+
+    :global(.placeholder-form input),
+    :global(.placeholder-form textarea) {
+      width: 100%;
+      border: 1px solid #000;
+      border-radius: 0;
+      padding: 10px 12px;
+      font: inherit;
+      color: #000;
+      background: #fff;
+    }
+
+    :global(.placeholder-form textarea) {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    :global(.placeholder-form .submit-btn) {
+      display: inline-block;
+      border: 1px solid #000;
+      border-radius: 0;
+      background: #000;
+      color: #fff;
+      padding: 12px 24px;
+      min-height: 44px;
+      min-width: 96px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    :global(.placeholder-form .submit-btn:hover) {
+      background: #111;
+    }
+
+    :global(.placeholder-form .submit-btn:focus-visible) {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+
+    :global(.placeholder-form .submit-btn:disabled) {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    :global(.error-message) {
+      display: block;
+      margin-top: 6px;
+      min-height: 1.2em;
+      font-size: 0.875rem;
+      color: #b00020;
+    }
+
+    :global(#responseMessage) {
+      margin-top: 16px;
+      color: #b00020;
+      font-size: 0.9rem;
+    }
+
+    .secondary-cta {
+      margin-top: 24px;
+      margin-bottom: 0;
+      font-size: 0.875rem;
+    }
+
+    .placeholder-footer {
+      max-width: 640px;
+      margin: 40px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+    }
+
+    .placeholder-footer p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .placeholder-page {
+        padding-top: 32px;
+      }
+    }
+  </style>
 </BaseLayout>
